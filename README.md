@@ -33,7 +33,7 @@ $$
 
 ## Components Breakdown
 
-Please note that these are just proposed components - it's not yet clear exactly what factors can go into determining ID resolutely, but this may be a good jumping off point, and the formula can be updated as it becomes clear which components definitively make up ID in order to provide as objective a measure of ID as possible.
+*(Please note that these are just proposed components - it's not yet clear exactly what factors can go into determining ID resolutely, but this may be a good jumping off point, and the formula can be updated as it becomes clear which components definitively make up ID in order to provide as objective a measure of ID as possible.)*
 
 ### Intelligence Components
 
