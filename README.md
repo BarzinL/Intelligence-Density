@@ -9,7 +9,9 @@ As AI models become more complex, in order to facilitate their understanding it 
 
 The Intelligence Density is defined as the ratio of the Intelligence Measure (I) to the Resource Consumption (R):
 
-$$ Intelligence Density (ID)=Intelligence Measure (I)Resource Consumption (R)\text{Intelligence Density (ID)} = \frac{\text{Intelligence Measure (I)}}{\text{Resource Consumption (R)}}Intelligence Density (ID)=Resource Consumption (R)Intelligence Measure (I)​ $$
+$$
+\text{Intelligence Density (ID)} = \frac{\text{Intelligence Measure (I)}}{\text{Resource Consumption (R)}}
+$$
 
 ### 1. Intelligence Measure (I)
 
@@ -21,10 +23,12 @@ Represents the resources utilized by the model, including computational and deve
 
 ### 3. Intelligence Density Formula
 
-ID=IR=∑iwi×Intelligence Componenti∑jvj×Resource Componentj\text{ID} = \frac{I}{R} = \frac{\sum_{i} w_i \times \text{Intelligence Component}_i}{\sum_{j} v_j \times \text{Resource Component}_j}ID=RI​=∑j​vj​×Resource Componentj​∑i​wi​×Intelligence Componenti​​
+$$
+\text{ID} = \frac{I}{R} = \frac{\sum_{i} w_i \times \text{Intelligence Component}i}{\sum{j} v_j \times \text{Resource Component}_j}
+$$
 
-- wiw_iwi​: Weight assigned to each intelligence component.
-- vjv_jvj​: Weight assigned to each resource component.
+- $$w_i$$: Weight assigned to each intelligence component.
+- $$v_j$$​: Weight assigned to each resource component.
 - All components are normalized to a common scale (e.g., 0 to 1).
 
 ## Components Breakdown
@@ -54,11 +58,11 @@ ID=IR=∑iwi×Intelligence Componenti∑jvj×Resource Componentj\text{ID} = \f
 
 1. **Normalize All Metrics**: Scale each component between 0 and 1.
 2. **Assign Weights**:
-    - Intelligence Weights (wiw_iwi​): Based on the importance of each component.
-    - Resource Weights (vjv_jvj​): Reflecting the impact of each resource.
-3. **Compute Intelligence Measure (I)**: I=∑iwi×Intelligence ComponentiI = \sum_{i} w_i \times \text{Intelligence Component}_iI=i∑​wi​×Intelligence Componenti​
-4. **Compute Resource Consumption (R)**: R=∑jvj×Resource ComponentjR = \sum_{j} v_j \times \text{Resource Component}_jR=j∑​vj​×Resource Componentj​
-5. **Calculate Intelligence Density (ID)**: ID=IR\text{ID} = \frac{I}{R}ID=RI​
+    - Intelligence Weights ($$w_i$$​): Based on the importance of each component.
+    - Resource Weights ($$v_j$$​): Reflecting the impact of each resource.
+3. **Compute Intelligence Measure (I)**: $$I = \sum_{i} w_i \times \text{Intelligence Component}_i$$
+4. **Compute Resource Consumption (R)**: $$R = \sum_{j} v_j \times \text{Resource Component}_j$$
+5. **Calculate Intelligence Density (ID)**: $$\text{ID} = \frac{I}{R}$$
 
 ### Example Calculation
 
@@ -69,25 +73,25 @@ ID=IR=∑iwi×Intelligence Componenti∑jvj×Resource Componentj\text{ID} = \f
     - Generalization (G): 0.8
     - Learning Efficiency (L): 0.7
     - Interpretability (Int): 0.6
-- **Weights (wiw_iwi​)**:
-    - wP=0.4w_P = 0.4wP​=0.4
-    - wG=0.3w_G = 0.3wG​=0.3
-    - wL=0.2w_L = 0.2wL​=0.2
-    - wInt=0.1w_{Int} = 0.1wInt​=0.1
+- **Weights ($$w_i$$​)**:
+    - $$w_P = 0.4$$
+    - $$w_G = 0.3$$
+    - $$w_L = 0.2$$
+    - $$w_{Int} = 0.1$$
 - **Resource Components** (normalized):
     - Model Size (S): 0.5
     - Computational Complexity (C): 0.6
     - Energy Consumption (E): 0.7
-- **Weights (vjv_jvj​)**:
-    - vS=0.5v_S = 0.5vS​=0.5
-    - vC=0.3v_C = 0.3vC​=0.3
-    - vE=0.2v_E = 0.2vE​=0.2
+- **Weights ($$v_j$$)**:
+    - $$v_S = 0.5$$
+    - $$v_C = 0.3$$
+    - $$v_E = 0.2$$
 
 **Calculations:**
 
-1. **Intelligence Measure (I)**: I=(0.4×0.9)+(0.3×0.8)+(0.2×0.7)+(0.1×0.6)=0.8I = (0.4 \times 0.9) + (0.3 \times 0.8) + (0.2 \times 0.7) + (0.1 \times 0.6) = 0.8I=(0.4×0.9)+(0.3×0.8)+(0.2×0.7)+(0.1×0.6)=0.8
-2. **Resource Consumption (R)**: R=(0.5×0.5)+(0.3×0.6)+(0.2×0.7)=0.57R = (0.5 \times 0.5) + (0.3 \times 0.6) + (0.2 \times 0.7) = 0.57R=(0.5×0.5)+(0.3×0.6)+(0.2×0.7)=0.57
-3. **Intelligence Density (ID)**: ID=0.80.57≈1.4035\text{ID} = \frac{0.8}{0.57} \approx 1.4035ID=0.570.8​≈1.4035
+1. **Intelligence Measure (I)**: $$I = (0.4 \times 0.9) + (0.3 \times 0.8) + (0.2 \times 0.7) + (0.1 \times 0.6) = 0.8$$
+2. **Resource Consumption (R)**: $$R = (0.5 \times 0.5) + (0.3 \times 0.6) + (0.2 \times 0.7) = 0.57$$
+3. **Intelligence Density (ID)**: $$\text{ID} = \frac{0.8}{0.57} \approx 1.4035$$
 
 A higher ID indicates a more efficient model in terms of intelligence per unit of resource consumed.
 
