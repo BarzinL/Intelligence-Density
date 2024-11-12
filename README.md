@@ -9,7 +9,7 @@ As AI models become more complex, in order to facilitate their understanding it 
 
 The Intelligence Density is defined as the ratio of the Intelligence Measure (I) to the Resource Consumption (R):
 
-Intelligence Density (ID)=Intelligence Measure (I)Resource Consumption (R)\text{Intelligence Density (ID)} = \frac{\text{Intelligence Measure (I)}}{\text{Resource Consumption (R)}}Intelligence Density (ID)=Resource Consumption (R)Intelligence Measure (I)​
+$$ Intelligence Density (ID)=Intelligence Measure (I)Resource Consumption (R)\text{Intelligence Density (ID)} = \frac{\text{Intelligence Measure (I)}}{\text{Resource Consumption (R)}}Intelligence Density (ID)=Resource Consumption (R)Intelligence Measure (I)​ $$
 
 ### 1. Intelligence Measure (I)
 
