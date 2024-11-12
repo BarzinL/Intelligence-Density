@@ -1,4 +1,4 @@
-# Intelligence-Density
+# What is "Intelligence Density"?
 "Intelligence Density" is a proposed metric (or conceptual framework) for evaluating AI model efficiency by measuring intelligence relative to resource consumption. This repository explores and formalizes the concept, providing a structured approach to balance performance and resource use, with multiple applications across identifying models with the best trade-offs, more meaningful comparisons of different architectures and approaches, providing guidance on where to focus to increase intelligence density, and the ability to hand off this systematic measure to models that approach or achieve true AGI capabilities to quickly bootstrap themselves into ASI models. ID can also be used in optimizing explainable and interpretable AI models.
 
 ## Overview
