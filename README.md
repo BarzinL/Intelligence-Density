@@ -1,5 +1,5 @@
 # Intelligence-Density
-"Intelligence Density" is a metric for evaluating AI model efficiency by measuring intelligence relative to resource consumption. This repository explores and formalizes the concept, providing a structured approach to balance performance and resource use, with applications in optimizing explainable and interpretable AI models.
+"Intelligence Density" is a proposed metric (or conceptual framework) for evaluating AI model efficiency by measuring intelligence relative to resource consumption. This repository explores and formalizes the concept, providing a structured approach to balance performance and resource use, with multiple applications across identifying models with the best trade-offs, more meaningful comparisons of different architectures and approaches, providing guidance on where to focus to increase intelligence density, and the ability to hand off this systematic measure to models that approach or achieve true AGI capabilities to quickly bootstrap themselves into ASI models. ID can also be used in optimizing explainable and interpretable AI models.
 
 ## Overview
 
@@ -93,7 +93,7 @@ $$
 2. **Resource Consumption (R)**: $$R = (0.5 \times 0.5) + (0.3 \times 0.6) + (0.2 \times 0.7) = 0.57$$
 3. **Intelligence Density (ID)**: $$\text{ID} = \frac{0.8}{0.57} \approx 1.4035$$
 
-A higher ID indicates a more efficient model in terms of intelligence per unit of resource consumed.
+*A higher ID indicates a more efficient model in terms of intelligence per unit of resource consumed.*
 
 ## Considerations and Refinements
 
