@@ -3,7 +3,7 @@
 
 ## Overview
 
-As AI models become more complex, in order to facilitate their understanding it becomes increasingly more important to meaningfully measure their capabilities. Additionally, we need more systematic approaches to balance their intelligence capabilities with resource efficiency. **Intelligence Density** offers a comprehensive way to evaluate and optimize AI models, especially in contexts where both performance and resource constraints are critical.
+As AI models become more complex, in order to facilitate their understanding it becomes increasingly more important to meaningfully measure their capabilities. Notably, we require systematic approaches to balance their intelligence capabilities with resource efficiency in order to create optimally capable models. **Intelligence Density** offers a comprehensive way to evaluate and optimize AI models, especially in contexts where both performance and resource constraints are critical.
 
 ## Defining Intelligence Density
 
