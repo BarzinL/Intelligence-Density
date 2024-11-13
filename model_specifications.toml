@@ -1,0 +1,16 @@
+[IntelligenceComponents]
+performance = { value = 0.9, weight = 0.4 }
+generalization = { value = 0.8, weight = 0.3 }
+learning_efficiency = { value = 0.7, weight = 0.2 }
+interpretability = { value = 0.6, weight = 0.1 }
+robustness = { value = 0.75, weight = 0.2 }
+transfer_learning_capability = { value = 0.85, weight = 0.15 }
+creativity_problem_solving = { value = 0.7, weight = 0.2 }
+
+[ResourceComponents]
+model_size = { value = 0.5, weight = 0.5 }
+computational_complexity = { value = 0.6, weight = 0.3 }
+energy_consumption = { value = 0.7, weight = 0.2 }
+inference_time = { value = 0.4, weight = 0.1 }
+hardware_utilization = { value = 0.65, weight = 0.15 }
+development_time = { value = 0.8, weight = 0.1 }
