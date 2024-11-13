@@ -1,3 +1,5 @@
+# You can run this script to calculate the ID value based on settings specified in model_specifications.toml
+
 import toml
 
 def calculate_weighted_sum(components):
