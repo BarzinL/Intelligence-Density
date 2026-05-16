@@ -1,18 +1,24 @@
-# You can add the values and weights of your parameters here and run calculate_ID.py to retrieve your ID value
+# Model specification for Intelligence Density calculation.
+# Run: python calculate_ID.py model_specifications.toml
+#
+# Rules:
+#   - All 'value' fields must be in [0, 1] (normalized metrics).
+#   - Weights within each section should ideally sum to 1.0.
+#     If they don't, the script will auto-normalize them and print a warning.
 
 [IntelligenceComponents]
-performance = { value = 0.9, weight = 0.4 }
-generalization = { value = 0.8, weight = 0.3 }
-learning_efficiency = { value = 0.7, weight = 0.2 }
-interpretability = { value = 0.6, weight = 0.1 }
-robustness = { value = 0.75, weight = 0.2 }
-transfer_learning_capability = { value = 0.85, weight = 0.15 }
-creativity_problem_solving = { value = 0.7, weight = 0.2 }
+performance                = { value = 0.9,  weight = 0.25 }
+generalization             = { value = 0.8,  weight = 0.20 }
+learning_efficiency        = { value = 0.7,  weight = 0.15 }
+interpretability           = { value = 0.6,  weight = 0.10 }
+robustness                 = { value = 0.75, weight = 0.15 }
+transfer_learning          = { value = 0.85, weight = 0.10 }
+creativity_problem_solving = { value = 0.7,  weight = 0.05 }
 
 [ResourceComponents]
-model_size = { value = 0.5, weight = 0.5 }
-computational_complexity = { value = 0.6, weight = 0.3 }
-energy_consumption = { value = 0.7, weight = 0.2 }
-inference_time = { value = 0.4, weight = 0.1 }
-hardware_utilization = { value = 0.65, weight = 0.15 }
-development_time = { value = 0.8, weight = 0.1 }
+model_size             = { value = 0.5,  weight = 0.30 }
+computational_complexity = { value = 0.6, weight = 0.25 }
+energy_consumption     = { value = 0.7,  weight = 0.20 }
+inference_time         = { value = 0.4,  weight = 0.10 }
+hardware_utilization   = { value = 0.65, weight = 0.10 }
+development_time       = { value = 0.8,  weight = 0.05 }

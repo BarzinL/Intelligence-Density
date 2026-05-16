@@ -54,6 +54,24 @@ $$
 5. **Hardware Utilization (H)**: Efficiency of hardware resource usage.
 6. **Development Time (D)**: Time invested in development and tuning.
 
+## Usage
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Calculate ID for a single model
+python calculate_ID.py model_specifications.toml
+
+# Compare and rank multiple models
+python calculate_ID.py --rank model_a.toml model_b.toml model_c.toml
+
+# Run tests
+pytest test_calculate_ID.py -v
+```
+
+Edit `model_specifications.toml` (or copy it) to describe your model. All `value` fields must be in `[0, 1]`. Weights do not need to sum to exactly `1.0` — the script will auto-normalize them.
+
 ## Calculating Intelligence Density
 
 ### Step-by-Step Guide
