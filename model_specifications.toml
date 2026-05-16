@@ -1,10 +1,18 @@
-# Model specification for Intelligence Density calculation.
+# Reference instantiation of the Intelligence Density framework.
 # Run: python calculate_ID.py model_specifications.toml
 #
+# The values below are illustrative proxy estimates — rough placeholders
+# intended to demonstrate the formula structure. They are NOT authoritative
+# measurements, and their specific operationalization (what data or methodology
+# should legitimately fill each slot) is separate work, deliberately left open
+# by the framework. Substitute your own rigorously derived values for any
+# serious application.
+#
 # Rules:
-#   - All 'value' fields must be in [0, 1] (normalized metrics).
-#   - Weights within each section should ideally sum to 1.0.
-#     If they don't, the script will auto-normalize them and print a warning.
+#   - All 'value' fields must be in [0, 1] (normalized).
+#   - For intelligence components: higher value = more of the named capability.
+#   - For resource components: higher value = greater resource consumption.
+#   - Weights do not need to sum to 1.0 — the script auto-normalizes them.
 
 [IntelligenceComponents]
 performance                = { value = 0.9,  weight = 0.25 }

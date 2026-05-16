@@ -5,6 +5,22 @@
 
 As AI models become more complex, in order to facilitate their understanding it becomes increasingly more important to meaningfully measure their capabilities. Notably, we require systematic approaches to balance their intelligence capabilities with resource efficiency in order to create optimally capable models. **Intelligence Density** offers a comprehensive way to evaluate and optimize AI models, especially in contexts where both performance and resource constraints are critical.
 
+## Framework Design
+
+Intelligence Density operates as a two-layer framework:
+
+**Layer 1 — The ID Schema (this framework):** The formula defines the *structure* of the measurement — intelligence relative to resource consumption, expressed as a normalized weighted ratio. This layer is abstract and stable. It does not prescribe how any individual component should be measured.
+
+**Layer 2 — Operationalization (separate work):** Determining what data, methodology, or proxy fills each component slot is a deliberately open problem. Different research contexts, model architectures, or application domains will call for different operationalizations. As AI measurement science matures, better operationalizations will emerge and can be substituted into the same formula without changing the framework itself.
+
+This separation is intentional. Binding the formula to specific benchmarks would make it brittle — benchmarks saturate, shift in meaning, and get superseded. The ID schema is meant to remain valid as a conceptual layer regardless of how its components are operationalized at any given point in time.
+
+**What makes an operationalization valid:**
+- Values are normalized to a common scale (0 to 1)
+- Higher values are directionally consistent with the component definition (higher = more of the named property)
+- For resource components: higher value = greater resource consumption
+- The measure is reproducible given the same inputs
+
 ## Defining Intelligence Density
 
 The Intelligence Density is defined as the ratio of the Intelligence Measure (I) to the Resource Consumption (R):
@@ -24,7 +40,7 @@ Represents the resources utilized by the model, including computational and deve
 ### 3. Intelligence Density Formula
 
 $$
-\text{ID} = \frac{I}{R} = \frac{\sum_{i} w_i \times \text{Intelligence Component}i}{\sum{j} v_j \times \text{Resource Component}_j}
+\text{ID} = \frac{I}{R} = \frac{\sum_{i} w_i \times \text{Intelligence Component}_{i}}{\sum_{j} v_j \times \text{Resource Component}_{j}}
 $$
 
 - $$w_i$$: Weight assigned to each intelligence component.
@@ -33,7 +49,11 @@ $$
 
 ## Components Breakdown
 
-*(Please note that these are just proposed components - it's not yet clear exactly what factors can go into determining ID resolutely, but this may be a good jumping off point, and the formula can be updated as it becomes clear which components definitively make up ID in order to provide as objective a measure of ID as possible.)*
+The components listed here define the conceptual *dimensions* of intelligence and resource consumption — what ought to be measured, not how to measure it. Each component is a named slot in the formula. What fills that slot — which benchmark score, measurement methodology, or derived proxy — is a separate research question and is intentionally left open.
+
+This means the components below are stable as concepts even while their operationalization remains an active problem. As the field develops better tools for measuring things like robustness, transfer learning capability, or interpretability, those measurements can be plugged directly into the existing formula without modifying the framework.
+
+The component list itself is also open to refinement. If a dimension is missing or a proposed one turns out not to be meaningful, it can be added or removed. The formula accommodates any number of components on either side.
 
 ### Intelligence Components
 
@@ -76,13 +96,14 @@ Edit `model_specifications.toml` (or copy it) to describe your model. All `value
 
 ### Step-by-Step Guide
 
-1. **Normalize All Metrics**: Scale each component between 0 and 1.
-2. **Assign Weights**:
-    - Intelligence Weights ($$w_i$$​): Based on the importance of each component.
-    - Resource Weights ($$v_j$$​): Reflecting the impact of each resource.
-3. **Compute Intelligence Measure (I)**: $$I = \sum_{i} w_i \times \text{Intelligence Component}_i$$
-4. **Compute Resource Consumption (R)**: $$R = \sum_{j} v_j \times \text{Resource Component}_j$$
-5. **Calculate Intelligence Density (ID)**: $$\text{ID} = \frac{I}{R}$$
+1. **Choose and operationalize your components**: Decide what each named component means in your context — which measurement, benchmark, or proxy will fill each slot. This is the layer-2 work; the framework does not prescribe it.
+2. **Normalize all values**: Scale each component's value to [0, 1]. The specific normalization method (min-max, percentile rank, ratio to a reference ceiling, etc.) is part of the operationalization.
+3. **Assign weights**:
+    - Intelligence Weights ($$w_i$$): Reflecting the relative importance of each capability dimension.
+    - Resource Weights ($$v_j$$): Reflecting the relative impact of each resource dimension.
+4. **Compute Intelligence Measure (I)**: $$I = \sum_{i} w_i \times \text{Intelligence Component}_i$$
+5. **Compute Resource Consumption (R)**: $$R = \sum_{j} v_j \times \text{Resource Component}_j$$
+6. **Calculate Intelligence Density (ID)**: $$\text{ID} = \frac{I}{R}$$
 
 ### Example Calculation
 
